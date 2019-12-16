@@ -10,6 +10,8 @@ import csv
 import tkinter
 
 
+
+#
 def run():
     animation = matplotlib.animation.FuncAnimation(fig, update, frames=gen_function, repeat=False)
     canvas.draw()
@@ -30,7 +32,6 @@ model_menu.add_command(label="Run model", command=run)
 
 
 random.seed(1)
-#random.shuffle
 num_of_agents = 10
 num_of_iterations = 100
    
@@ -48,11 +49,8 @@ with open("in.txt", newline='') as f:
             rowlist.append(value)
         environment.append(rowlist)
 
-## show environment        
-#matplotlib.pyplot.imshow(environment)
-
-
-# Create agents
+        
+# Creates agents
 print("Create agents")
 for i in range(num_of_agents):
     list_of_agents.append(agentframework.Agents(i, list_of_agents,environment))
@@ -96,74 +94,6 @@ def gen_function(b = [0]):
     while (a < num_of_iterations) & (carry_on) :
         yield a			# Returns control and waits next call.
         a = a + 1
-
-#def run():
-    #print("run")
-    #animation=matplotlib.animation.FuncAnimation(fig,update,frames=gen_function,repeat=False)    
-    #canvas.show()
-    #print("done")
-
-#root = tkinter.Tk()
-#root.wm_title("Model")
-#canvas = matplotlib.backends.backend_tkagg.FigureCanvasTkAgg(fig, master=root)
-#canvas._tkcanvas.pack(side=tkinter.TOP, fill=tkinter.BOTH, expand=1)
-
-#root = tkinter.Tk() 
-#menu_bar = tkinter.Menu(root)
-#root.config(menu=menu_bar)
-#model_menu = tkinter.Menu(menu_bar)
-#menu_bar.add_cascade(label="Model", menu=model_menu)
-#model_menu.add_command(label="Run model", command=run)
-
-#matplotlib.pyplot.show()
-
-
-#animation = matplotlib.animation.FuncAnimation(fig, update, interval=1, frames=num_of_iterations, repeat=False)
-#animation=matplotlib.animation.FuncAnimation(fig,update,frames=gen_function,repeat=False)
-
-
-		   
-#def run():
-    #animation = matplotlib.animation.FuncAnimation(fig, update, frames=gen_function, repeat=False)
-    #canvas.show()
-
-#c = tkinter.Canvas(root, width=200, height=200)
-#c.pack()
-#c.create_rectangle(0, 0, 200, 200, fill="blue")
-#tkinter.mainloop()
-
-#matplotlib.pyplot.show()
-
-
-#print(list_of_agents[0])
-#print(list_of_agents[1])
-#print(list_of_agents[len(list_of_agents) - 1])
-
-
-
-#print(list_of_agents[0])
-#print(list_of_agents[1])
-#print(list_of_agents[len(list_of_agents) - 1])
-
-
-
-
-
-##
-#for agent in list_of_agents:
-#    matplotlib.pyplot.scatter(agent.x,agent.y, color="red")
-    
-
-
-#Distance
-#def distance_between(agents_row_a, agents_row_b):
-#    return (((agents_row_a.x - agents_row_b.x)**2) +
-#    ((agents_row_a.y - agents_row_b.y)**2))**0.5
-#answer = ( ( (y0 - y1) **2 ) + ( (x0 - x1) **2 ) ) ** 0.5
-#print (answer) 
-#
-#matplotlib.pyplot.show()
-
 
 
 
