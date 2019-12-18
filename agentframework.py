@@ -3,7 +3,10 @@
 Created on Fri Nov  1 16:24:56 2019
 
 @author: 44781
+
 """
+
+#builds agents class, initialises them in a random location,and moves them
 import random
 class Agents:
     
