@@ -1,17 +1,26 @@
 
 #the model runs and  allows agents to interact with the environment
 #
-#runs until the some number of steps reached or a stopping condition reached
+#runs until some number of steps reached or a stopping condition reached
 
+
+#generates random variable
 import random
+
 import time 
 import operator
+#adds matplotlib builtins
 import matplotlib
 matplotlib.use('TkAgg')
+#creates figures and axes to achieve the desired plot
 import matplotlib.pyplot
-import matplotlib.animation 
+#animates the 
+import matplotlib.animation
+#adds the agents created in the agentframework 
 import agentframework
+#reads the csv file
 import csv
+#adds tkinter and opens a window demonstrating a simple Tk interface
 import tkinter
 
 
