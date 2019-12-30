@@ -1,6 +1,6 @@
 
 #the model runs and  allows agents to interact with the environment
-#
+
 #runs until the some number of steps reached or a stopping condition reached
 
 import random
