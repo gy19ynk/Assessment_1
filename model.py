@@ -1,7 +1,12 @@
 
 #the model runs and  allows agents to interact with the environment
+<<<<<<< HEAD
 #
 #runs until some number of steps reached or a stopping condition reached
+=======
+
+#runs until the some number of steps reached or a stopping condition reached
+>>>>>>> f9368ec4df336034af0e4eddae38ac259e8fd20f
 
 
 #generates random variable
