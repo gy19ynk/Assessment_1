@@ -1,12 +1,10 @@
 
 #the model runs and  allows agents to interact with the environment
-<<<<<<< HEAD
-#
-#runs until some number of steps reached or a stopping condition reached
-=======
 
-#runs until the some number of steps reached or a stopping condition reached
->>>>>>> f9368ec4df336034af0e4eddae38ac259e8fd20f
+
+#runs until some number of steps reached or a stopping condition reached
+
+
 
 
 #generates random variable
@@ -19,7 +17,7 @@ import matplotlib
 matplotlib.use('TkAgg')
 #creates figures and axes to achieve the desired plot
 import matplotlib.pyplot
-#animates the 
+#animates the model
 import matplotlib.animation
 #adds the agents created in the agentframework 
 import agentframework
@@ -50,17 +48,17 @@ model_menu = tkinter.Menu(menu_bar)
 menu_bar.add_cascade(label="Model", menu=model_menu)
 model_menu.add_command(label="Run model", command=run)
 
-
+#total number of agents and the repetitions each agent runs with a control measure
 random.seed(1)
 num_of_agents = 10
 num_of_iterations = 100
-   
+#creates a list of agents that are close to each other and  share resources  
 neighbourhood = 20
 list_of_agents = []
 
 # Loads environment(code which represents the world that agents may interact with)
 print("Load environment")
-#reads the csv file of the 
+#reads the csv file of the environment
 environment = []
 with open("in.txt", newline='') as f:
     reader = csv.reader(f, quoting=csv.QUOTE_NONNUMERIC)
@@ -73,7 +71,7 @@ with open("in.txt", newline='') as f:
 
 
 
-# Creates agents
+# Creates agents and adds list of agents to agents from the agentframework
 print("Create agents")
 for i in range(num_of_agents):
     list_of_agents.append(agentframework.Agents(i, list_of_agents,environment))
