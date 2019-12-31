@@ -10,7 +10,7 @@ Created on Fri Nov  1 16:24:56 2019
 import random
 class Agents:
     
-    def __init__(self, i, agents, environment):
+    def __init__(self, i, agents, environment): #initialises the agents and their environment
         self.i = i
         self.x = random.randint(0,300)
         self.y = random.randint(0,300)
@@ -18,10 +18,10 @@ class Agents:
         self.environment=environment
         self.store = 0
         
-    def __str__(self):
+    def __str__(self): #returns ID of the agents
         return "ID=" + str(self.i) + ", store=" + str(self.store) + ", x=" + str(self.x) + ", y=" + str(self.y)
     
-    def move(self):
+    def move(self): #moves the individual agents
         
         if random.random() < 0.5:
             self.x= (self.x+1)% 300
@@ -69,11 +69,7 @@ class Agents:
            
         
             
-#agents.append ([random.randint(0,99),random.randint(0,99)random.randint(0,99)])
-#agents.append ([random.randint(0,99),random.randint(0,99)])
-#print maximum agent of values x and y
 
-#print(a.x, a.y)
 
 
 

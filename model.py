@@ -48,8 +48,9 @@ model_menu = tkinter.Menu(menu_bar)
 menu_bar.add_cascade(label="Model", menu=model_menu)
 model_menu.add_command(label="Run model", command=run)
 
-#total number of agents and the repetitions each agent runs with a control measure
+#initialises random number generator
 random.seed(1)
+#total number of agents and the repetitions each agent runs
 num_of_agents = 10
 num_of_iterations = 100
 #creates a list of agents that are close to each other and  share resources  
@@ -58,7 +59,7 @@ list_of_agents = []
 
 # Loads environment(code which represents the world that agents may interact with)
 print("Load environment")
-#reads the csv file of the environment
+#reads the csv file into the environment list
 environment = []
 with open("in.txt", newline='') as f:
     reader = csv.reader(f, quoting=csv.QUOTE_NONNUMERIC)
@@ -95,20 +96,20 @@ def update(frame_number):
             list_of_agents[i].share_with_neighbours(neighbourhood)
             
 
-    matplotlib.pyplot.xlim(0,300)  
-    matplotlib.pyplot.ylim(0,300) 
-    matplotlib.pyplot.imshow(environment)
+    matplotlib.pyplot.xlim(0,300)  #plots x values
+    matplotlib.pyplot.ylim(0,300) #plots y values
+    matplotlib.pyplot.imshow(environment) #plots environment
     
     for i in range(num_of_agents):
-        matplotlib.pyplot.scatter(list_of_agents[i].x,list_of_agents[i].y)
-
-
-    # show environment    
-    matplotlib.pyplot.draw()
-		
+        #creates scatter plot of the list of agents
+        matplotlib.pyplot.scatter(list_of_agents[i].x,list_of_agents[i].y) 
+       
+    matplotlib.pyplot.draw()   # show environment 
+    
+#returns the function so that it is resumable		
 def gen_function(b = [0]):
     a = 0
-    global carry_on #Not actually needed as we're not assigning, but clearer
+    global carry_on 
     while (a < num_of_iterations) & (carry_on) :
         yield a			# Returns control and waits next call.
         a = a + 1
