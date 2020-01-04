@@ -1,5 +1,6 @@
 
-#The model is run using the agents and environment that were called and intitialised in the agentframework.The model allows agents to interact with the environment until some number of steps reached or a stopping condition reached
+#The model is run using the agents and environment that are called and intitialised in the agentframework.
+#The model allows agents to interact with the environment until some number of steps reached or a stopping condition reached
 #The environment is in the form of raster data with values that represent a pixel of the image arranged in a grid
 
 #generates random variable
@@ -19,25 +20,29 @@ import csv
 import tkinter
 
 
-#runs model in line with the event based programming model
+#Makes an animation by repeatedly calling functions.
 def run():
     animation = matplotlib.animation.FuncAnimation(fig, update, frames=gen_function, repeat=False)
     canvas.draw()
 
-#creates an empty figure that the environment with the agents will be plotted on
+#creates new figures that the environment  
 fig = matplotlib.pyplot.figure(figsize=(7, 7))
 
-#builds main window of the figure; sets title, creates and lays out a matplotlib canvas embedded within our window linked with figure
+#builds main window, sets title, creates and lays out a matplotlib canvas embedded within our window linked with figure
 root = tkinter.Tk() #main window
 root.wm_title("Model") #window and title to run model
+#creates drawing area or playground for the figure
 canvas = matplotlib.backends.backend_tkagg.FigureCanvasTkAgg(fig, master=root)
+#packs the canvas and navigation toolbar into Tkinter's main window
 canvas._tkcanvas.pack(side=tkinter.TOP, fill=tkinter.BOTH, expand=1)
 
-#simple event based programming model
+#Adds a menu bar in Tkinter (main window)
 menu_bar = tkinter.Menu(root)
+#adds the file "model" in Tkinter
 root.config(menu=menu_bar)
 model_menu = tkinter.Menu(menu_bar)
 menu_bar.add_cascade(label="Model", menu=model_menu)
+#adds command for initialising the running of model 
 model_menu.add_command(label="Run model", command=run)
 
 #initialises random number generator
@@ -73,7 +78,7 @@ for i in range(num_of_agents):
     
 carry_on = True	
 
-	
+#Gets the index of the agents to update in frame	
 def update(frame_number):
     print("frame_number", frame_number)
     global carry_on
