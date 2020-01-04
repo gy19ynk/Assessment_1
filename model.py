@@ -1,21 +1,13 @@
 
-#the model runs and  allows agents to interact with the environment
-
-
-#runs until some number of steps reached or a stopping condition reached
-
-
-
+#The model is run using the agents and environment that were called and intitialised in the agentframework.The model allows agents to interact with the environment until some number of steps reached or a stopping condition reached
+#The environment is in the form of raster data with values that represent a pixel of the image arranged in a grid
 
 #generates random variable
 import random
-
-import time 
-import operator
-#adds matplotlib builtins
+#adds matplotlib builtins and Agg rendering to a Tk canvas
 import matplotlib
 matplotlib.use('TkAgg')
-#creates figures and axes to achieve the desired plot
+#creates figures and axes  to achieve the desired plot
 import matplotlib.pyplot
 #animates the model
 import matplotlib.animation
@@ -32,12 +24,12 @@ def run():
     animation = matplotlib.animation.FuncAnimation(fig, update, frames=gen_function, repeat=False)
     canvas.draw()
 
-#creates figure
+#creates an empty figure that the environment with the agents will be plotted on
 fig = matplotlib.pyplot.figure(figsize=(7, 7))
 
-#builds main window; sets title, creates and lays out a matplotlib canvas embedded within our window linked with matplotlib figure
+#builds main window of the figure; sets title, creates and lays out a matplotlib canvas embedded within our window linked with figure
 root = tkinter.Tk() #main window
-root.wm_title("Model")
+root.wm_title("Model") #window and title to run model
 canvas = matplotlib.backends.backend_tkagg.FigureCanvasTkAgg(fig, master=root)
 canvas._tkcanvas.pack(side=tkinter.TOP, fill=tkinter.BOTH, expand=1)
 
@@ -59,11 +51,13 @@ list_of_agents = []
 
 # Loads environment(code which represents the world that agents may interact with)
 print("Load environment")
-#reads the csv file into the environment list
+#makes an empty list called environment
 environment = []
+#reads the csv file "in.txt" into the environment list
 with open("in.txt", newline='') as f:
     reader = csv.reader(f, quoting=csv.QUOTE_NONNUMERIC)
     for line in reader:
+        #makes an empty rowlist and adds values to the rowlist in the environment
         rowlist=[]
         for value in line:
             rowlist.append(value)
@@ -96,15 +90,16 @@ def update(frame_number):
             list_of_agents[i].share_with_neighbours(neighbourhood)
             
 
-    matplotlib.pyplot.xlim(0,300)  #plots x values
+    matplotlib.pyplot.xlim(0,300)  #plots x values 
     matplotlib.pyplot.ylim(0,300) #plots y values
-    matplotlib.pyplot.imshow(environment) #plots environment
+    matplotlib.pyplot.imshow(environment) #plots and shows environment
     
     for i in range(num_of_agents):
         #creates scatter plot of the list of agents
         matplotlib.pyplot.scatter(list_of_agents[i].x,list_of_agents[i].y) 
-       
-    matplotlib.pyplot.draw()   # show environment 
+     # updates the pyplot or  environment plot  
+    matplotlib.pyplot.draw() 
+    
     
 #returns the function so that it is resumable		
 def gen_function(b = [0]):
