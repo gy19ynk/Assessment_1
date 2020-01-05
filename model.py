@@ -25,7 +25,7 @@ def run():
     animation = matplotlib.animation.FuncAnimation(fig, update, frames=gen_function, repeat=False)
     canvas.draw()
 
-#creates new figures that the environment  
+#creates new figures of the agents and environment  
 fig = matplotlib.pyplot.figure(figsize=(7, 7))
 
 #builds main window, sets title, creates and lays out a matplotlib canvas embedded within our window linked with figure
@@ -59,7 +59,7 @@ print("Load environment")
 #makes an empty list called environment
 environment = []
 #reads the csv file "in.txt" into the environment list
-with open("in.txt", newline='') as f:
+with open("in.txt") as f:
     reader = csv.reader(f, quoting=csv.QUOTE_NONNUMERIC)
     for line in reader:
         #makes an empty rowlist and adds values to the rowlist in the environment
@@ -71,7 +71,7 @@ with open("in.txt", newline='') as f:
 
 
 
-# Creates agents and adds list of agents to agents from the agentframework
+# Creates agents and adds list of agents  from the agentframework
 print("Create agents")
 for i in range(num_of_agents):
     list_of_agents.append(agentframework.Agents(i, list_of_agents,environment))

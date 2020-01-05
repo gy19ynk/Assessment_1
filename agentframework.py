@@ -6,7 +6,8 @@ Created on Fri Nov  1 16:24:56 2019
 
 """
 
-#The following code will call and build agents class by initialising them in a random location,and moves them in the environment before running the model.
+#The following code will call and build agents class by initialising them in a random location
+#  moves them in the environment before running the model.
 import random
 #creates a blue print of many agents
 class Agents:
@@ -45,7 +46,7 @@ class Agents:
          else:
              self.store = self.store + food
              self.environment[self.y][self.x] = self.environment[self.y][self.x] - food
-    
+    #returns euclidian distance between self and another agent
     def distance_between(self, agent):
         return (((self.x - agent.x)**2) + ((self.y - agent.y)**2))**0.5           
                 
@@ -62,6 +63,7 @@ class Agents:
                  agent.store = ave
                  # good sharing method
          pass 
+     
 
  
        
