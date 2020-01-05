@@ -102,7 +102,7 @@ def update(frame_number):
     for i in range(num_of_agents):
         #creates scatter plot of the list of agents
         matplotlib.pyplot.scatter(list_of_agents[i].x,list_of_agents[i].y) 
-     # updates the pyplot or  environment plot  
+     # updates the pyplot or  environment plot 
     matplotlib.pyplot.draw() 
     
     
