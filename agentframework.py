@@ -6,8 +6,11 @@ Created on Fri Nov  1 16:24:56 2019
 
 """
 
-#The following code will call and build agents class by initialising them in a random location
-#  moves them in the environment before running the model.
+
+"""The following code will call and build agents class by initialising them in a random location
+moves them in the environment before running the model.
+"""
+
 import random
 #creates a blue print of many agents
 class Agents:
