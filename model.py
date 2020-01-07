@@ -7,7 +7,7 @@
 
 
 The model is run using the agents and environment that are called and initialised in the agentframework.Graphical User Interface 
-(GUI)used to run model.A window pops up when model is run. Use the option "Run model" on the menu bar to create agents in an 
+(GUI)is used to run model.A window pops up when model is run. Use the option "Run model" on the menu bar to create agents in an 
 environment. The Agents move, eat and share resources in the environment and sharing resources with each other under conditions
 """
 
@@ -38,8 +38,9 @@ fig = matplotlib.pyplot.figure(figsize=(7, 7))
 
 """
 Initiates GUI and it's properties
- build main window; set title, create and lay out a matplotlib canvas embedded within our window linked with matplotlib 
+ builds main window; sets title, creates and lay out a matplotlib canvas embedded within our window linked with matplotlib 
 figure"""
+
 root = tkinter.Tk() #main window
 root.wm_title("Model")
 #creates drawing area or playground for the figure
