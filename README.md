@@ -11,4 +11,4 @@ Agent-based modelling project where agents are given individual behaviour and th
 
 
 # LICENSE
-This project is licensed under the MIT LICENSE, for further details on the license see .
+This project is licensed under the MIT LICENSE, for further details on the license see 
