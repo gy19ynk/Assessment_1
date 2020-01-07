@@ -17,4 +17,4 @@ The code for the model was built in Spyder 3.7
 
 
 ### License
-This project is licensed under the MIT LICENSE, for further details on the license see license in the repository
+This project is licensed under the MIT LICENSE, for further details on the license see *license* in the repository
