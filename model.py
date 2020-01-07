@@ -1,8 +1,11 @@
-#Agent Based Model created by Naomi Yankho Kalebe
+"""Agent Based Model 
+   
+   @Author: Naomi Yankho Kalebe
 
-#Run in Spyder
+   Run in Spyder
 
-"""
+
+
 The model is run using the agents and environment that are called and initialised in the agentframework.Graphical User Interface 
 (GUI)used to run model.A window pops up when model is run. Use the option "Run model" on the menu bar to create agents in an 
 environment. The Agents move, eat and share resources in the environment and sharing resources with each other under conditions
