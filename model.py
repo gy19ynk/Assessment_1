@@ -3,7 +3,7 @@
 #Run in Spyder
 
 """
-The model is run using the agents and environment that are called and intitialised in the agentframework.Graphical User Interface 
+The model is run using the agents and environment that are called and initialised in the agentframework.Graphical User Interface 
 (GUI)used to run model.A window pops up when model is run. Use the option "Run model" on the menu bar to create agents in an 
 environment. The Agents move, eat and share resources in the environment and sharing resources with each other under conditions
 """
@@ -23,7 +23,7 @@ import csv
 import tkinter
 
 """
-Display the plot of the environment and agents.
+Displays the plot of the environment and agents.
 """
 def run():
     animation = matplotlib.animation.FuncAnimation(fig, update, frames=gen_function, repeat=False)
@@ -34,7 +34,7 @@ fig = matplotlib.pyplot.figure(figsize=(7, 7))
 
 
 """
-Initiate GUI and it's properties
+Initiates GUI and it's properties
  build main window; set title, create and lay out a matplotlib canvas embedded within our window linked with matplotlib 
 figure"""
 root = tkinter.Tk() #main window
@@ -68,7 +68,7 @@ list_of_agents = []
 
 
 """
-Load environment and read the csv file 'in.txt' that is found in the repository
+Loads environment and read the csv file 'in.txt' that is found in the repository
 """
 print("Load environment")
 #reads the csv file 'in.txt' into the environment list
@@ -125,7 +125,7 @@ def update(frame_number):
     matplotlib.pyplot.draw()   # show environment 
     
 """
-Enable agents to animate until a stopping condition is reached, 100 iteration
+Enable agents to animate until a stopping condition is reached, 100 iterations
 """		
 def gen_function(b = [0]):
     a = 0
