@@ -2,7 +2,7 @@
 """
 Created on Fri Nov  1 16:24:56 2019
 
-@author: 44781
+@author: Naomi Yankho Kalebe
 
 """
 
@@ -63,6 +63,7 @@ class Agents:
                  agent.store = ave
                  # good sharing method
          pass 
+     
      
 
  
