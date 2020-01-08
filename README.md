@@ -4,15 +4,10 @@ Agent-based modelling project where agents are given individual behaviour and th
 
 ### Directory
 To have access to the code files or directory, check in the repositories or simply click on https://github.com/gy19ynk/Hello-World. The following files are in the repository and are the ingredients for the Agent Based model.
-#### model.py
-#### agentframework.py
-#### in.txt 
-#### License
-#### Readme
 
 
 ### Software
-The code for the model was built in Spyder 3.7 
+To run the model, the code for the model was run in Spyder 3.7 
 
 
 ### License
