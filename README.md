@@ -4,7 +4,7 @@ Agent-based modelling project where agents are given individual behaviour and th
 
 ### Directory
 To have access to the code files or directory, check in the repositories or click on "View on Github". The following files are in the repository and are the ingredients for the Agent Based model.
-https://github.com/gy19ynk/Hello-World/issues/1#issue-546571925
+
 
 ### Software
 The code for the model was built in Spyder 3.7 
@@ -18,4 +18,4 @@ The code for the model was built in Spyder 3.7
 
 
 ### License
-This project is licensed under the MIT LICENSE, for further details on the license see LICENSE
+This project is licensed under the MIT LICENSE, for further details on the license see https://github.com/gy19ynk/Hello-World/blob/master/LICENSE
