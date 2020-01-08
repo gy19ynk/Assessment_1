@@ -43,7 +43,7 @@ figure"""
 
 root = tkinter.Tk() #main window
 root.wm_title("Model")
-#creates drawing area or playground for the figure
+#creates drawing area or playground for the 2D list or figure
 canvas = matplotlib.backends.backend_tkagg.FigureCanvasTkAgg(fig, master=root)
 #packs the canvas and navigation toolbar into Tkinter's main window
 canvas._tkcanvas.pack(side=tkinter.TOP, fill=tkinter.BOTH, expand=1)
