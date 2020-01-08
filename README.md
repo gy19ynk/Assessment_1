@@ -6,6 +6,8 @@ Agent-based modelling project where agents are given individual behaviour and th
 To have access to the code files or directory, check in the repositories or click on "View on Github". The following files are in the repository and are the ingredients for the Agent Based model.
 
 
+
+
 ### Software
 The code for the model was built in Spyder 3.7 
 
