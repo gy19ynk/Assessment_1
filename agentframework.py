@@ -64,7 +64,7 @@ class Agents:
                  ave = total / 2
                  self.store = ave
                  agent.store = ave
-                 # good sharing method
+                 
          pass 
      
      
